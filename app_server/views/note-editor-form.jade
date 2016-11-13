@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .row.page-header
+    .col-lg-12
+      h1 Add Note
+        .row
+          .col-xs-12.col-md-6
+            form.form-horizontal(action="/notes", method="get", role="form")
+              .form-group
+                  .col-sm-10
+                    textarea#note.form-control(name="note", rows="20")
+                button.btn.btn-default.pull-left SAVE
+                button.btn.btn-default.pull-left DELETE
+              .col-xs-12.col-md-4
