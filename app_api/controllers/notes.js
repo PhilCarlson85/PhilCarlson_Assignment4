@@ -10,8 +10,6 @@ var sendJsonResponse = function(res, status, content) {
     res.json(content);
 };
 
-//Need to get "ListAll working before moving on.
-
 module.exports.notesListAll = function (req, res) {
     Not
         .find()

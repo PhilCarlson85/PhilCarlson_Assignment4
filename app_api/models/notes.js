@@ -5,4 +5,4 @@ var noteSchema = new mongoose.Schema({
     note_id: Number,
 });
 
-mongoose.model('Notes', notesSchema);
+mongoose.model('Notes', noteSchema);
