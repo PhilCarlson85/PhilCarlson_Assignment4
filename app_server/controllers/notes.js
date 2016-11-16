@@ -1,6 +1,7 @@
-/**
- * Created by Phil on 10/16/16.
- */
+var request = require('request');
+var apiOptions = {
+    server : "http://localhost:3000"
+};
 
 /* GET 'Notes List' page */
 module.exports.noteList = function(req, res) {
