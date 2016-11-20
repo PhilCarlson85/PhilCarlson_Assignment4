@@ -3,7 +3,7 @@
 var mongoose = require( 'mongoose' );
 var gracefulShutdown;
 /* VERIFY THIS CONNECTION: Need to make sure you have the right URI linked through this page and app.js */
-var dbURI = 'mongodb://localhost/test';
+var dbURI = 'mongodb://localhost/notes';
 mongoose.connect(dbURI);
 
 mongoose.connection.on('connected', function () {

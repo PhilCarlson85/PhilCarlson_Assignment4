@@ -4,8 +4,26 @@ var apiOptions = {
 };
 
 /* GET 'Notes List' page */
+var renderNotelist = function(req, res, responseBody){
+    res.render('notes-list', {
+        title: 'Notes List',
+        notes: responseBody});
+};
 module.exports.noteList = function(req, res) {
-    res.render('notes-list', { title: 'Notes List' });
+    var requestOptions, path;
+    path = '/api/notes';
+    requestOptions = {
+        url: apiOptions.server + path,
+        method: "GET",
+        json: {},
+        qs: {}
+    };
+    request(
+        requestOptions,
+        function (err, response, body) {
+            renderNotelist(req, res, body);
+        }
+    );
 };
 
 /* GET 'Sign-In' page */
